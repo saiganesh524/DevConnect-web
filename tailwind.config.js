@@ -4,5 +4,6 @@ export default {
   theme: {
     extend: {},
   },
+  /*global require*/
   plugins: [require("daisyui")],
 };

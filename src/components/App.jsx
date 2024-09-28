@@ -5,7 +5,6 @@ import Profile from "./Profile";
 import { Provider } from "react-redux";
 import appStore from "../utils/appStore";
 import Feed from "./Feed";
-// import NavBar from "./NavBar";
 
 function App() {
   return (
