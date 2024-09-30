@@ -18,7 +18,7 @@ const Body = () => {
         withCredentials: true,
       });
 
-      dispacth(addUser(res.data));
+      dispacth(addUser(res?.data));
     } catch (error) {
       if (error.status === 401) {
         navigate("/login");

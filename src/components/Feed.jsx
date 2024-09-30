@@ -15,7 +15,7 @@ const Feed = () => {
       const res = await axios.get(BASE_URL + "/user/feed", {
         withCredentials: true,
       });
-      console.log(res?.data);
+      console.log("Response from backend", res?.data);
       dispatch(addFeed(res?.data));
     } catch (error) {
       console.error(error);
@@ -27,9 +27,15 @@ const Feed = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-[80vh]">
-      <UserCard user={feed[0]} />
-    </div>
+    feed && (
+      <div className="flex justify-center items-center h-[80.5vh] py-1">
+        {console.log("In the feed store : ", feed[1])}
+        {/* {feed.map((user) => (
+          <UserCard key={user._id} card={user} />
+        ))} */}
+        <UserCard card={feed[0]} />
+      </div>
+    )
   );
 };
 
