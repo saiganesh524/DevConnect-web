@@ -6,4 +6,7 @@ export default {
   },
   /*global require*/
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark", "cupcake", "winter"],
+  },
 };
