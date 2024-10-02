@@ -18,7 +18,7 @@ const Feed = () => {
       console.log("Response from backend", res?.data);
       dispatch(addFeed(res?.data));
     } catch (error) {
-      console.error(error);
+      console.error(error?.response?.data);
     }
   };
 

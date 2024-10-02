@@ -1,12 +1,13 @@
 import axios from "axios";
 import { BASE_URL } from "../utils/constants";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { connect, useDispatch, useSelector } from "react-redux";
 import { addConnections } from "../utils/connectionSlice";
 
 const Connections = () => {
   const connections = useSelector((store) => store.connections);
   const dispatch = useDispatch();
+  const [error, setError] = useState("");
   const fetchConnections = async () => {
     try {
       const res = await axios.get(BASE_URL + "/user/connections", {
@@ -14,7 +15,7 @@ const Connections = () => {
       });
       dispatch(addConnections(res.data.data));
     } catch (err) {
-      // Handle Error Case
+      setError(err?.response?.data || "Something went wrong");
     }
   };
 
@@ -24,7 +25,8 @@ const Connections = () => {
 
   if (!connections) return;
 
-  if (connections.length === 0) return <h1> No Connections Found</h1>;
+  if (connections.length === 0)
+    return <h1 className="flex justify-center my-10"> No Connections Found</h1>;
 
   return (
     <div className="text-center my-10">
