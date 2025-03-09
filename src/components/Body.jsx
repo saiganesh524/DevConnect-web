@@ -8,7 +8,7 @@ import { addUser } from "../utils/userSlice";
 import { useEffect } from "react";
 
 const Body = () => {
-  const dispacth = useDispatch();
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const userData = useSelector((store) => store.user);
 
@@ -18,7 +18,7 @@ const Body = () => {
         withCredentials: true,
       });
 
-      dispacth(addUser(res?.data));
+      dispatch(addUser(res?.data));
     } catch (error) {
       if (error.response?.status === 401) {
         navigate("/login");

@@ -20,7 +20,7 @@ const UserCard = ({ card }) => {
 
   return (
     <div className="card bg-base-300 w-96 shadow-xl">
-      <figure className="w-96 h-96 overflow-hidden">
+      <figure className="w-96 h-64 overflow-hidden">
         <img
           className="w-full h-full object-cover"
           src={photoUrl}
