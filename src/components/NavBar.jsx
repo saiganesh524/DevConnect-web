@@ -36,7 +36,7 @@ const NavBar = () => {
     <div className="navbar bg-base-300">
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost text-xl">
-          👩‍💻 DevConnect
+          👩‍💻 LinkDev
         </Link>
       </div>
       <label className="grid cursor-pointer place-items-center">
