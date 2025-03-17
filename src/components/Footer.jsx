@@ -4,11 +4,13 @@ const Footer = () => {
   return (
     <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
       <nav className="grid grid-flow-col gap-4">
-        <Link to="/termsandconds">Terms and Conditions</Link>
-        <Link to="/privacy">Privacy Policy</Link>
-        <Link to="/cancel">Cancellation and Refund</Link>
-        <Link to="/shipping">Shipping and Delivery</Link>
-        <Link to="/contact">Contact Us</Link>
+        <Link to="/pages/terms-and-conditions">Terms and Conditions</Link>
+        <Link to="/pages/privacy-policy">Privacy Policy</Link>
+        <Link to="/pages/cancellation-and-refunds">
+          Cancellation and Refund
+        </Link>
+        <Link to="/pages/shipping-and-delivery">Shipping and Delivery</Link>
+        <Link to="/pages/contact-us">Contact Us</Link>
       </nav>
       <nav>
         <div className="grid grid-flow-col gap-4">

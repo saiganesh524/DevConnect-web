@@ -12,6 +12,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import CancellationAndRefunds from "./components/CancellationAndRefunds";
 import ShippingAndDelivery from "./components/ShippingAndDelivery";
 import Contact from "./components/Contact";
+import Pages from "./components/Pages";
 
 function App() {
   return (
@@ -25,11 +26,19 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/connections" element={<Connections />} />
               <Route path="/requests" element={<Requests />} />
-              <Route path="/termsandconds" element={<TermsAndCons />} />
-              <Route path="/privacy" element={<PrivacyPolicy />} />
-              <Route path="/cancel" element={<CancellationAndRefunds />} />
-              <Route path="/shipping" element={<ShippingAndDelivery />} />
-              <Route path="/contact" element={<Contact />} />
+            </Route>
+            <Route path="/pages" element={<Pages />}>
+              <Route path="terms-and-conditions" element={<TermsAndCons />} />
+              <Route path="privacy-policy" element={<PrivacyPolicy />} />
+              <Route
+                path="cancellation-and-refunds"
+                element={<CancellationAndRefunds />}
+              />
+              <Route
+                path="shipping-and-delivery"
+                element={<ShippingAndDelivery />}
+              />
+              <Route path="contact-us" element={<Contact />} />
             </Route>
           </Routes>
         </BrowserRouter>
