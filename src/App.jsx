@@ -13,6 +13,7 @@ import CancellationAndRefunds from "./components/CancellationAndRefunds";
 import ShippingAndDelivery from "./components/ShippingAndDelivery";
 import Contact from "./components/Contact";
 import Pages from "./components/Pages";
+import Chat from "./components/Chat";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
               <Route path="/profile" element={<Profile />} />
               <Route path="/connections" element={<Connections />} />
               <Route path="/requests" element={<Requests />} />
+              <Route path="/chat/:targetUserId" element={<Chat />} />
             </Route>
             <Route path="/pages" element={<Pages />}>
               <Route path="terms-and-conditions" element={<TermsAndCons />} />
